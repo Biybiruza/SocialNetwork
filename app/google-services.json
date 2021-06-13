@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1043604099984",
+    "project_id": "socialnetwork-c217d",
+    "storage_bucket": "socialnetwork-c217d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043604099984:android:2259f59b032f450f7e9915",
+        "android_client_info": {
+          "package_name": "com.biybiruza.socialnetwork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043604099984-m8vepld7dmbbrao4d2e4it88ooq93ofs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA5A4HJ0978vSvAimY1nY2p8AwWn_tyYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043604099984-m8vepld7dmbbrao4d2e4it88ooq93ofs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
