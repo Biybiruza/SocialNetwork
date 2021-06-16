@@ -1,10 +1,11 @@
-package com.biybiruza.socialnetwork
+package com.biybiruza.socialnetwork.ui.sign
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.biybiruza.socialnetwork.MainActivity
 import com.biybiruza.socialnetwork.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -26,11 +27,10 @@ class LoginActivity : AppCompatActivity() {
                 mAuth.signInWithEmailAndPassword(binding.username.text.toString(),binding.password.text.toString())
                     .addOnCompleteListener {
                         if (it.isSuccessful){
-                            val currentUser = mAuth.currentUser
                             binding.loading.visibility = View.GONE
-                            upDateUI(currentUser)
+                            onStart()
                         } else {
-                            Toast.makeText(this,it.exception?.localizedMessage,Toast.LENGTH_LONG).show()
+                            Toast.makeText(this,"siz registratsiyadan otpegensiz",Toast.LENGTH_LONG).show()
                             binding.loading.visibility = View.GONE
                         }
                     }
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         binding.register.setOnClickListener {
-            val intent = Intent(this,RegisterActivity::class.java)
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
     }
@@ -54,6 +54,7 @@ class LoginActivity : AppCompatActivity() {
         if(user != null){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

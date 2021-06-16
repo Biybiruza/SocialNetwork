@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/profile_vector"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/profile_img"
+        android:layout_marginTop="30dp"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/username"
+        android:background="@drawable/border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_vector"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:gravity="top|start"
+        android:drawableEnd="@drawable/ic_baseline_create_24"
+        android:inputType="text"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phoneNumber"
+        android:background="@drawable/border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUserName"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:gravity="top|start"
+        android:drawableEnd="@drawable/ic_baseline_create_24"
+        android:inputType="number"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:background="@drawable/border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:gravity="top|start"
+        android:drawableEnd="@drawable/ic_baseline_create_24"
+        android:inputType="textEmailAddress"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/info"
+        android:background="@drawable/border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:maxLines="5"
+        android:lines="5"
+        android:gravity="top|start"
+        android:drawableEnd="@drawable/ic_baseline_create_24"
+        android:inputType="textMultiLine"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="16dp"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="#2196F3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
